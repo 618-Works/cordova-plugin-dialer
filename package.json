@@ -1,0 +1,35 @@
+{
+    "name": "cordova-plugin-phone-dialer",
+    "version": "0.1.1",
+    "description": "a cordova plugin to call phone dialer",
+    "cordova": {
+        "id": "cordova-plugin-phone-dialer",
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:CMCXY0321/cordova-plugin-phone-dialer.git"
+    },
+    "keywords": [
+        "cordova",
+        "ios",
+        "android",
+        "dialer",
+        "tel",
+        "ecosystem:cordova",
+        "cordova-ios",
+        "cordova-android"
+    ],
+    "engines": [{
+        "name": "cordova",
+        "version": ">=4.0.0"
+    }],
+    "license": "MIT",
+    "homepage": "git@github.com:CMCXY0321/cordova-plugin-phone-dialer.git#readme",
+    "bugs": {
+        "url": "https://github.com/CMCXY0321/cordova-plugin-phone-dialer.git/issues"
+    }    
+}

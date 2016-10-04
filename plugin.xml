@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:rim="http://www.blackberry.com/ns/widgets"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-phone-dialer"
+    version="0.1.1">
+
+    <name>phone-dialer</name>
+    <description>a cordova plugin, to call the phone dialer</description>
+    <license>MIT</license>
+    <keywords>cordova, dialer, ios, android, tel</keywords>
+    <repo>https://github.com/CMCXY0321/cordova-plugin-phone-dialer.git</repo>
+    <issue>https://github.com/CMCXY0321/cordova-plugin-phone-dialer/issues</issue>
+
+    <!--require cordova version -->
+    <engines>
+        <engine name="cordova" version=">=4.0.0" />
+    </engines>
+    <!-- js module-->
+    <js-module src="www/phone-dialer.js" name="PhoneDialer">
+        <clobbers target="PhoneDialer" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+       <config-file target="config.xml" parent="/*">
+            <feature name="PhoneDialer">
+                <param name="ios-package" value="PhoneDialer"/>
+            </feature>
+        </config-file>        
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>phone-dialer</string>
+                <string>phone-tel</string>
+            </array>
+        </config-file>
+
+        <!-- Plugin source code -->
+        <header-file src="src/ios/PhoneDialer.h" />
+        <source-file src="src/ios/PhoneDialer.m" />
+    </platform>
+    <!-- android -->
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="PhoneDialer">
+                <param name="android-package" value="org.apache.cordova.dialer.PhoneDialer"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CALL_PHONE" />
+        </config-file>
+        <source-file src="src/android/PhoneDialer.java" target-dir="src/org/apache/cordova/dialer" />
+    </platform>    
+</plugin>
