@@ -25,8 +25,10 @@ public class PhoneDialer extends CordovaPlugin {
     @Override  
     public boolean execute (String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try{
-            if (action.equals("dialPhone")) {
-                this.dialPhone(args.getString(0), callbackContext);
+            if (action.equals("call")) {
+                this.call(args.getString(0), callbackContext);
+            } else if(action.equals("dial")) {
+                this.dial(args.getString(0), callbackContext);
             }
 
             callbackContext.success();
@@ -37,8 +39,8 @@ public class PhoneDialer extends CordovaPlugin {
         return true;
     }
 
-    //拨打电话  
-    private void dialPhone (String phonenumber, CallbackContext callbackContext) {  
+    // make the phone call 
+    private void call (String phonenumber, CallbackContext callbackContext) {  
         if (phonenumber != null && phonenumber.length() > 0) {  
             Intent i = new Intent();
 
@@ -50,4 +52,18 @@ public class PhoneDialer extends CordovaPlugin {
             callbackContext.error("phone number can not be empty");  
         }
     }
+
+    // open the dial
+    private void dial (String phonenumber, CallbackContext callbackContext) {  
+        if (phonenumber != null && phonenumber.length() > 0) {  
+            Intent i = new Intent();
+
+            i.setAction(Intent.ACTION_DIAL);
+            i.setData(Uri.parse("tel:" + phonenumber));
+
+            this.cordova.startActivityForResult(this, i, 0);
+        } else {
+            callbackContext.error("phone number can not be empty");  
+        }
+    }    
 }  

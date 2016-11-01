@@ -7,7 +7,9 @@
 
 @interface PhoneDialer : CDVPlugin
 
-- (void) dialPhone:(NSMutableArray *)arguments withDict:(NSMutableDictionary *) options;
+- (void) call:(NSMutableArray *)arguments withDict:(NSMutableDictionary *) options;
+
+- (void) dial:(NSMutableArray *)arguments withDict:(NSMutableDictionary *) options;
 
 @end
 
