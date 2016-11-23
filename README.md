@@ -1,11 +1,11 @@
-# cordova-plugin-ios-dialer
+## ios-dialer
 
-## a cordova plugin, to call the phone dialer
+### a cordova plugin, to call the phone dialer
 
-### PhoneDialer.call(phone_number, onSuccess, onError);
+* PhoneDialer.call(phone_number, onSuccess, onError);
     
-### PhoneDialer.dial(phone_number, onSuccess, onError);
+* PhoneDialer.dial(phone_number, onSuccess, onError);
 
-# LICENSE
+### LICENSE
 
 [MIT LICENSE](http://opensource.org/licenses/MIT)
