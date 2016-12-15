@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:CMCXY0321/cordova-plugin-dialer.git"
+        "url": "git@github.com:mulberryx/cordova-plugin-dialer.git"
     },
     "keywords": [
         "cordova",
@@ -28,8 +28,8 @@
         "version": ">=4.0.0"
     }],
     "license": "MIT",
-    "homepage": "git@github.com:CMCXY0321/cordova-plugin-dialer.git#readme",
+    "homepage": "https://github.com/mulberryx/cordova-plugin-dialer#readme",
     "bugs": {
-        "url": "https://github.com/CMCXY0321/cordova-plugin-dialer.git/issues"
+        "url": "https://github.com/mulberryx/cordova-plugin-dialer/issues"
     }    
 }
