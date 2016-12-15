@@ -33,7 +33,7 @@ public class PhoneDialer extends CordovaPlugin {
 
             callbackContext.success();
         } catch (Exception e){  
-            callbackContext.error("can not call");  
+            callbackContext.error("unexpected error");  
         }  
 
         return true;

@@ -1,6 +1,6 @@
 {
     "name": "cordova-plugin-phone-dialer",
-    "version": "0.1.1",
+    "version": "0.5.5",
     "description": "a cordova plugin to call phone dialer",
     "cordova": {
         "id": "cordova-plugin-phone-dialer",
