@@ -18,10 +18,24 @@ import android.net.Uri;
   
 public class PhoneDialer extends CordovaPlugin {
 
+    /**
+     * make phone call 
+     * @param { CordovaInterface } cordova instance
+     * @param { CordovaWebView } web view instance
+     * @return none 
+     */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
     }
 
+
+    /**
+     * execute
+     * @param { String } action
+     * @param { JSONArray } arguments
+     * @param { CallbackContext } callback context     
+     * @return none 
+     */
     @Override  
     public boolean execute (String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try{
@@ -39,7 +53,12 @@ public class PhoneDialer extends CordovaPlugin {
         return true;
     }
 
-    // make the phone call 
+    /**
+     * make phone call 
+     * @param { String } phone number
+     * @param { CallbackContext } callback context
+     * @return none 
+     */
     private void call (String phonenumber, CallbackContext callbackContext) {  
         if (phonenumber != null && phonenumber.length() > 0) {  
             Intent i = new Intent();
@@ -53,7 +72,12 @@ public class PhoneDialer extends CordovaPlugin {
         }
     }
 
-    // open the dial
+    /**
+     * open the dial 
+     * @param { String } phone number
+     * @param { CallbackContext } callback context
+     * @return none 
+     */
     private void dial (String phonenumber, CallbackContext callbackContext) {  
         if (phonenumber != null && phonenumber.length() > 0) {  
             Intent i = new Intent();
